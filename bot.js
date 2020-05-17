@@ -110,7 +110,7 @@ if (message.content === prefix+'s2') {
       let count = 0;
       let ecount = 0;
       for(let x = 0; x < 90000; x++) {
-        message.channel.send(`**Shit ! , Ramadan , ya kalb :joy: , Eat Me , تدري شئ انا احب البطاطس , بطاطس بطاطه , شنوده يبيع بطاطه هههههه **[ " ${x} " ]`)
+        message.channel.send(`**يا ابن العبيطههه :joy: :joy:**`)
           .then(m => {
             count++;
           })
