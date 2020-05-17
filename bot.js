@@ -34,7 +34,7 @@ client.on('ready', () => {
 
 
 const myid = ['440577280952238097'];
-const prefix = ['-']
+var prefix = "-";
 
 client.on('ready', () => {
    console.log(`----------------`);
