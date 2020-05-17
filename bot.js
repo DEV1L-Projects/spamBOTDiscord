@@ -1,16 +1,3 @@
-const http = require('http');
-const express = require('express');
-const app = express();
-app.get("/", (request, response) => {
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://kahrbaa-x.glitch.me/`);
-}, 280000);
- 
-// طبعا الكود هيبقا صعب انك تفهم لوحدك لنو معقد شويتين لكن فكرتو سهلة وحاولت اوفرلكم حاجات كتير مثل انك تقدر تشغل 20 توكانات ف الكود ده
-// 
 const Discord = require('discord.js');
 const Canvas = require("canvas");
 const fs = require("fs");
