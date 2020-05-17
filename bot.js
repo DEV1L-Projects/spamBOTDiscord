@@ -22,7 +22,6 @@ const dateFormat = require('dateformat');//npm i dateformat
 const YouTube = require('simple-youtube-api');
 const hastebins = require('hastebin-gen');
 const pretty = require("pretty-ms");
-client.login(process.env.BOT_TOKEN);
 const queue = new Map();
 var table = require('table').table
 const Discord = require('discord.js');
@@ -230,4 +229,4 @@ client.on('message', message => {
 
     
 });
-
+client.login(process.env.BOT_TOKEN);
