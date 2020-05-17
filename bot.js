@@ -53,7 +53,9 @@ if (message.content === prefix+'s1') {
       let count = 0;
       let ecount = 0;
       for(let x = 0; x < 90000; x++) {
-        message.channel.send(`**Hello , Hey , How Are You ? , Fine Thx :D , Ok , كل زق بس , اللهم اني صائم هههههه , صائم قال ههههههههه , احسن منك يالجموسه **[ " ${x} " ]`)
+        message.channel.send(`**Hello**`)
+        message.channel.send(`**Bye**`)
+        message.channel.send(`**LOL**`)
           .then(m => {
             count++;
           })
