@@ -43,6 +43,12 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+    if(message.content === prefix+'p1'){
+        message.channel.send("#profile")
+    }
+});
+
+client.on('message', message => {
 if (message.content === prefix+'s1') {
       let count = 0;
       let ecount = 0;
@@ -90,6 +96,12 @@ client2.on('message', message => {
 client2.on('message', message => {
     if(message.content === prefix+'r2'){
         message.channel.send('#rep <@286088294234718209>')
+    }
+});
+
+client2.on('message', message => {
+    if(message.content === prefix+'p2'){
+        message.channel.send('#profile')
     }
 });
 
