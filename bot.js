@@ -4,6 +4,7 @@ const client2 = new Discord.Client();
 const myid = ['440577280952238097'];
 const prefix = ['-'];
 const fs = require("fs");
+const config = require("./config.json")
 
 client.on('ready', () => {
    console.log(`----------------`);
