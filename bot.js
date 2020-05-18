@@ -24,10 +24,6 @@ client2.on('ready', () => {
    console.log(`----------------`);
 });
 
-const Discord = require("discord.js");
-const client = new Discord.Client();
-const fs = require("fs");
-
 const dinfo = JSON.parse(fs.readFileSync("./data.json", "UTF8"));
 client.on("message", async msg => {
     if(!msg.guild) return;
@@ -88,8 +84,8 @@ client.on('message', message => {
   
 if (command == config.groupnm +"1") {
 if (!dinfo.owner.includes(message.author.id)) return; 
-let rank = message.guild.member(message.author).roles.find('name', 'Role.Kahrbaa');
-if (!rank) return  message.channel.send(err).then(m => m.delete(5000))
+let rank = message.guild.member(message.author).roles.find('name', 'Founder');
+if (!rank) return  message.channel.send("Sorry You Dont My Owner").then(m => m.delete(5000))
   message.channel.send(args.join("  "))
     message.delete();
   }
@@ -146,8 +142,8 @@ client2.on('message', message => {
   
 if (command == config.groupnm +"2") {
 if (!dinfo.owner.includes(message.author.id)) return; 
-let rank = message.guild.member(message.author).roles.find('name', 'Role.Kahrbaa');
-if (!rank) return  message.channel.send(err).then(m => m.delete(5000))
+let rank = message.guild.member(message.author).roles.find('name', 'Founder');
+if (!rank) return  message.channel.send("Sorry You Dont My Owner").then(m => m.delete(5000))
   message.channel.send(args.join("  "))
     message.delete();
   }
