@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const client2 = new Discord.Client();
 const myid = ['440577280952238097'];
 const prefix = ['-'];
+const fs = require("fs");
 
 client.on('ready', () => {
    console.log(`----------------`);
@@ -22,7 +23,17 @@ client2.on('ready', () => {
    console.log(`----------------`);
 });
 
+const Discord = require("discord.js");
+const client = new Discord.Client();
+const fs = require("fs");
 
+const dinfo = JSON.parse(fs.readFileSync("./data.json", "UTF8"));
+client.on("message", async msg => {
+    if(!msg.guild) return;
+    if(msg.author.bot) return;
+if(!dinfo) dinfo = { // جمــيع الحقوق محفوظة لدي "Kahrbaa"
+        owner: "440577280952238097"
+}});
 
 client.on('message', message => {
     if(message.content === prefix+'d1'){
@@ -63,19 +74,21 @@ if (message.content === prefix+'s1') {
 });
 
 client.on('message', message => {
+
   if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
+  if (!message.content.startsWith(config.prefix)) return;
 
   let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
+  command = command.slice(config.prefix.length);
 
   let args = message.content.split(" ").slice(1);
 
 
-
-if (command == "-talk") {
-let rank = message.guild.member(message.author).roles.find('name', 'Founder');
-if (!rank) return message.reply(' ')
+  
+if (command == config.groupnm +"1") {
+if (!dinfo.owner.includes(message.author.id)) return; 
+let rank = message.guild.member(message.author).roles.find('name', 'Role.Kahrbaa');
+if (!rank) return  message.channel.send(err).then(m => m.delete(5000))
   message.channel.send(args.join("  "))
     message.delete();
   }
@@ -121,18 +134,19 @@ if (message.content === prefix+'s2') {
 
 client2.on('message', message => {
   if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
+  if (!message.content.startsWith(config.prefix)) return;
 
   let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
+  command = command.slice(config.prefix.length);
 
   let args = message.content.split(" ").slice(1);
 
 
-
-if (command == "-talk") {
-let rank = message.guild.member(message.author).roles.find('name', 'Founder');
-if (!rank) return message.reply(' ')
+  
+if (command == config.groupnm +"2") {
+if (!dinfo.owner.includes(message.author.id)) return; 
+let rank = message.guild.member(message.author).roles.find('name', 'Role.Kahrbaa');
+if (!rank) return  message.channel.send(err).then(m => m.delete(5000))
   message.channel.send(args.join("  "))
     message.delete();
   }
